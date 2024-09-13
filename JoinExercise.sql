@@ -35,7 +35,7 @@ ON products.ProductID = sales.ProductID
 WHERE sales.ProductID = 97;
 /* joins: find Product name, reviewer name, rating, and comment on the Visio TV. (only return for the lowest rating!) */
 
-/*SELECT products.name, reviews.Reviewer, reviews.Rating, reviews.Comment
+SELECT products.name, reviews.Reviewer, reviews.Rating, reviews.Comment
 FROM products
 INNER JOIN reviews
 ON products.ProductID = reviews.ProductID
@@ -48,8 +48,8 @@ This query should return:
 -  the employee's first and last name
 -  the name of each product
 -  and how many of that product they sold */
-/*SELECT employees.EmployeeID, employees.FirstName, employees.LastName, products.Name, sales.Quantity
+SELECT employees.EmployeeID, employees.FirstName, employees.LastName, products.Name, sales.Quantity
 FROM ((sales
 INNER JOIN products ON sales.ProductID = products.ProductID)
 INNER JOIN employees ON sales.EmployeeID = employees.EmployeeID)
-ORDER BY employees.EmployeeID;*/
+ORDER BY employees.EmployeeID;
